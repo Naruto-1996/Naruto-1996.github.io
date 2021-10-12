@@ -6,7 +6,7 @@
   <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/"/>
-  <updated>2021-07-30T10:28:50.553Z</updated>
+  <updated>2021-10-12T09:03:33.987Z</updated>
   <id>https://github.com/Naruto-1996/Naruto-1996.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>appium自动化测试</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/10/12/appium-zi-dong-hua-ce-shi/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/10/12/appium-zi-dong-hua-ce-shi/</id>
+    <published>2021-10-12T08:15:16.000Z</published>
+    <updated>2021-10-12T09:03:33.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;使用Appium对Android-App-进行自动化测试&quot;&gt;&lt;a href=&quot;#使用Appium对Android-App-进行自动化测试&quot; class=&quot;headerlink&quot; title=&quot;使用Appium对Android App</summary>
+        
+      
+    
+    
+    
+    <category term="Appium" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Appium/"/>
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Android/"/>
+    
+    <category term="Mac" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Mac/"/>
+    
+    <category term="自动化测试" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>deploy a nft art and transfer in eth testnet</title>
@@ -519,35 +548,6 @@
     
     
     <category term="Linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Linux/"/>
-    
-    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>给Linux安装nginx</title>
-    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/09/gei-linux-an-zhuang-nginx/"/>
-    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/09/gei-linux-an-zhuang-nginx/</id>
-    <published>2020-12-09T06:25:33.000Z</published>
-    <updated>2020-12-09T06:59:14.719Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;给Linux-ubuntu-服务器安装nginx&quot;&gt;&lt;a href=&quot;#给Linux-ubuntu-服务器安装nginx&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="nginx" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/nginx/"/>
-    
-    
-    <category term="nginx" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/nginx/"/>
-    
-    <category term="linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/linux/"/>
     
     <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
     
