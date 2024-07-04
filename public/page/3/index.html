@@ -1,0 +1,1140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>第 3 页 | Weaver Li</title>
+  <meta name="author" content="Weaver Li">
+  
+  <meta name="description" content="Time is money!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Weaver Li"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Weaver Li" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70812759-1');
+</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Weaver Li</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header logo">
+  <h1>Show Me The Code!<span class="blink-fast">|</span></h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+
+
+		<i class="fa fa-heart blink-slow"></i>
+
+		wubba lubba dub dub.
+
+</div>    
+
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/12/02/redis-shi-yong-xin-de/" >redis使用心得</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-12-02  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="Redis-使用"><a href="#Redis-使用" class="headerlink" title="Redis 使用"></a>Redis 使用</h3><h4 id="1、在本地使用"><a href="#1、在本地使用" class="headerlink" title="1、在本地使用"></a>1、在本地使用</h4><p>进入到redis的src目录中</p>
+<pre><code>./redis-cli </code></pre>
+<ul>
+<li>一些常规操作</li>
+</ul>
+<pre><code>LPUSH 是把新的元素从右侧插入到数组中
+LPUSH fruits apple   # =&gt; ["apple"]   把元素从左边插入到数组中
+&gt; LPUSH  fruits banana   # =&gt; ["banana", "apple"]  
+
+RPUSH 是把新的元素从右侧插入到数组中
+&gt; LINDEX fruits 0     # =&gt; "banana"
+&gt; LINDEX fruits 1    # =&gt;  "apple"
+&gt; LRANGE fruits 0 1  #=&gt; ['banana', 'apple']   ， 注意只有lrange, 没有 rrange. </code></pre>
+<ul>
+<li>获取所有的key</li>
+</ul>
+<pre><code>keys *   这个*号是匹配所有的key 可以拼接 比如 fruits*</code></pre>
+<pre><code>127.0.0.1:6379&gt; keys *
+1) "fruits"</code></pre>
+<ul>
+<li>查看某个key下的值:</li>
+</ul>
+<pre><code>lrange fruits 0 -1</code></pre>
+<pre><code>127.0.0.1:6379&gt; lrange fruits 0 -1
+1) "def"
+2) "abc"
+3) "banana"
+4) "apple"</code></pre>
+<ul>
+<li>截断 保留trim中参数部分</li>
+</ul>
+<pre><code>ltrim fruits 0 2</code></pre>
+<pre><code>我们看到 这里只保留了0-2剩下的都删除了
+127.0.0.1:6379&gt; lrange fruits 0 -1
+1) "def"
+2) "abc"
+3) "banana"</code></pre>
+
+	
+	</div>
+  <a type="button" href="/2020/12/02/redis-shi-yong-xin-de/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/12/02/linux-yun-wei-fang-mian-de-zhi-shi/" >Linux 运维方面的知识</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-12-02  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="Linux-常用命令"><a href="#Linux-常用命令" class="headerlink" title="Linux 常用命令"></a>Linux 常用命令</h3><h5 id="1、怎么看Linux系统版本"><a href="#1、怎么看Linux系统版本" class="headerlink" title="1、怎么看Linux系统版本"></a>1、怎么看Linux系统版本</h5><p>登陆Linux，在终端输入</p>
+<pre class="line-numbers language-Linux"><code class="language-Linux">cat /proc/version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="2、查看服务器内存使用情况"><a href="#2、查看服务器内存使用情况" class="headerlink" title="2、查看服务器内存使用情况"></a>2、查看服务器内存使用情况</h5><pre class="line-numbers language-linux"><code class="language-linux">free -m<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20201202120027.png"></p>
+<h4 id="参数解释："><a href="#参数解释：" class="headerlink" title="参数解释："></a>参数解释：</h4><p>Mem行（单位均为M）：</p>
+<ul>
+<li>total：内存总数</li>
+<li>used：已使用内存数</li>
+<li>free：空闲内存数</li>
+<li>shared：当前废弃不用</li>
+<li>buffers：缓存内存数（Buffer）</li>
+<li>cached：缓存内舒数（Page）</li>
+</ul>
+<p>(-/+ buffers/cache)行：</p>
+<ul>
+<li>（-buffers/cache）: 真正使用的内存数，指的是第一部分的 used - buffers - cached</li>
+<li>（+buffers/cache）: 可用的内存数，指的是第一部分的 free + buffers + cached</li>
+</ul>
+<p>Swap行指交换分区。</p>
+<p>实际上不要看free少就觉得内存不足了，buffers和cached都是可以在使用内存时拿来用的，应该以(-/+ buffers/cache)行的free和used来看。只要没发现swap的使用，就不用太担心，如果swap用了很多，那就要考虑增加物理内存了。</p>
+<h4 id="3、-查看CPU使用情况"><a href="#3、-查看CPU使用情况" class="headerlink" title="3、 查看CPU使用情况"></a>3、 查看CPU使用情况</h4><pre><code>top</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20201202120433.png"></p>
+
+	
+	</div>
+  <a type="button" href="/2020/12/02/linux-yun-wei-fang-mian-de-zhi-shi/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/12/01/rails-lian-jie-duo-ge-shu-ju-ku/" >rails 连接多个数据库</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-12-01  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="Rails项目中如何连接多个数据库"><a href="#Rails项目中如何连接多个数据库" class="headerlink" title="Rails项目中如何连接多个数据库"></a>Rails项目中如何连接多个数据库</h4><h5 id="1、修改config-database-yml文件"><a href="#1、修改config-database-yml文件" class="headerlink" title="1、修改config/database.yml文件"></a>1、修改config/database.yml文件</h5><pre class="line-numbers language-ruby"><code class="language-ruby">default<span class="token punctuation">:</span> <span class="token operator">&amp;</span>default
+  adapter<span class="token punctuation">:</span> mysql2
+  encoding<span class="token punctuation">:</span> utf8
+  collation<span class="token punctuation">:</span> utf8_general_ci
+  pool<span class="token punctuation">:</span> <span class="token number">5</span>
+  host<span class="token punctuation">:</span> localhost
+  username<span class="token punctuation">:</span> root
+  password<span class="token punctuation">:</span> <span class="token number">123456</span>
+
+<span class="token comment" spellcheck="true">#原数据库</span>
+development<span class="token punctuation">:</span>
+  <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>default
+  database<span class="token punctuation">:</span> cadae
+
+<span class="token comment" spellcheck="true">#你想要连接的另一个数据库</span>
+development_main_database<span class="token punctuation">:</span>
+  <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>default
+  database<span class="token punctuation">:</span> cadae_copy
+
+test<span class="token punctuation">:</span>
+  <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>default
+  database<span class="token punctuation">:</span> cadae_test
+
+production<span class="token punctuation">:</span>
+  <span class="token operator">&lt;</span><span class="token operator">&lt;</span><span class="token punctuation">:</span> <span class="token operator">*</span>default
+  url<span class="token punctuation">:</span> <span class="token string">'mysql2://root:666666@localhost:3306/coiex?pool=10&amp;timeout=3000'</span>
+  pool<span class="token punctuation">:</span> <span class="token number">10</span>
+  database<span class="token punctuation">:</span> cadae
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="2、新建一个连接类继承-ActiveRecord-Base"><a href="#2、新建一个连接类继承-ActiveRecord-Base" class="headerlink" title="2、新建一个连接类继承 ActiveRecord::Base"></a>2、新建一个连接类继承 ActiveRecord::Base</h5><ul>
+<li>比如放在app/models/ 目录下 就叫做 database_connection.rb</li>
+</ul>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">DatabaseConnection</span> <span class="token operator">&lt;</span> <span class="token constant">ActiveRecord</span><span class="token punctuation">:</span><span class="token symbol">:Base</span>
+  <span class="token comment" spellcheck="true">#共用连接池，减少数据库连接的消耗</span>
+  <span class="token keyword">self</span><span class="token punctuation">.</span>abstract_class <span class="token operator">=</span> <span class="token keyword">true</span>
+  <span class="token comment" spellcheck="true"># 这里根据rails运行环境不同自动获取运行环境 转换为symbol类型   </span>
+  <span class="token function">establish_connection</span><span class="token punctuation">(</span><span class="token string">"<span class="token interpolation"><span class="token delimiter tag">#{</span>Rails<span class="token punctuation">.</span>env<span class="token delimiter tag">}</span></span>_main_database"</span><span class="token punctuation">.</span>to_sym<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">#或者使用</span>
+  <span class="token comment" spellcheck="true">#establish_connection(:development_main_database)</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>这里有个小坑 在创建database_connection.rb文件的时候 最好不要创建一个文件夹然后把它放进去 这样可能会找不到这个文件</li>
+</ul>
+<h5 id="3、在需要连接另一个数据库的model中继承咱们写的这个类就行了"><a href="#3、在需要连接另一个数据库的model中继承咱们写的这个类就行了" class="headerlink" title="3、在需要连接另一个数据库的model中继承咱们写的这个类就行了"></a>3、在需要连接另一个数据库的model中继承咱们写的这个类就行了</h5><pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token keyword">class</span> <span class="token class-name">AccountVerificationResult</span> <span class="token operator">&lt;</span> <span class="token constant">DatabaseConnection</span>
+
+<span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+	
+	</div>
+  <a type="button" href="/2020/12/01/rails-lian-jie-duo-ge-shu-ju-ku/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/11/18/zsh-permission-denied-jie-jue-ban-fa/" >zsh: permission denied: 解决办法</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-11-18  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="1、出现原因"><a href="#1、出现原因" class="headerlink" title="1、出现原因"></a>1、出现原因</h3><pre class="line-numbers language-java"><code class="language-java">用户没有权限，所以才出现了这个错误，所以只需要用chmod修改一下权限<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2、解决办法"><a href="#2、解决办法" class="headerlink" title="2、解决办法"></a>2、解决办法</h3><pre><code>chmod u+x *.sh</code></pre>
+<h3 id="3、说明"><a href="#3、说明" class="headerlink" title="3、说明"></a>3、说明</h3><pre><code>chmod是权限管理命令change the permissions mode of a file的缩写。
+u代表所有者。x代表执行权限。’+’ 表示增加权限。
+chmod u+x file.sh 就表示对当前目录下的file.sh文件的所有者增加可执行权限。</code></pre>
+
+	
+	</div>
+  <a type="button" href="/2020/11/18/zsh-permission-denied-jie-jue-ban-fa/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/android-intent-setflags-fang-fa-zhong-can-shu-zhi-de-han-yi/" >Android intent.setFlags方法中参数值的含义</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="Android中intent-setFlags方法中参数值的含义"><a href="#Android中intent-setFlags方法中参数值的含义" class="headerlink" title="Android中intent.setFlags方法中参数值的含义"></a>Android中intent.setFlags方法中参数值的含义</h4><h5 id="一、FLAG-ACTIVITY-NEW-TASK"><a href="#一、FLAG-ACTIVITY-NEW-TASK" class="headerlink" title="一、FLAG_ACTIVITY_NEW_TASK:"></a>一、FLAG_ACTIVITY_NEW_TASK:</h5><p>例如现在栈一的情况是：A    B   C(C位于栈顶)，C通过intent跳转到D，并且这个Intent添加了FLAG_ACTIVITY_NEW_TASK标记，<br>如果D这个Activity在Manifest.xml中声明了添加Task affinity，系统首先会查找有没有和D的Task affinity相同的task栈存在，<br>如果存在，就将D压入那个栈，如果不存在则会新建一个D的affinity的栈将其压入。如果D的Task affinity默认没有设置，则会将其压入栈1，变成A B C D，<br>这样就和不加FLAG_ACTIVITY_NEW_TASK标记效果是一样的了。但如果试图从非Activity的非正常途径启动一个activity，<br>比如从一个service、BroadcastReceiver等中启动一个Activity，则intent要设置Intent.FLAG_ACTIVITY_NEW_TASK标记。<br>Activity要存在于Activity栈中，而非Activity的途径启动Activity时必然不存在一个Activity的栈，<br>所以要新建一个Activity栈来存放要启动的Activity。</p>
+<h5 id="二、FLAG-ACTIVITY-CLEAR-TOP"><a href="#二、FLAG-ACTIVITY-CLEAR-TOP" class="headerlink" title="二、FLAG_ACTIVITY_CLEAR_TOP:"></a>二、FLAG_ACTIVITY_CLEAR_TOP:</h5><p>例如现在的栈情况为A B C D, D此时通过intent跳转到B，如果这个intent设置FLAG_ACTIVITY_CLEAR_TOP标记，则栈情况变为:A B。如果没有添加这个标记，则栈的情况将会变为：A B C D B 。<br>也就是说，如果设置了FLAG_ACTIVITY_CLEAR_TOP标记，并且目标Activity在栈中已存在，<br>则会把位于该目标Activity之上的Activity从栈中弹出销毁。</p>
+<h5 id="三、FLAG-ACTIVITY-NO-HISTORY"><a href="#三、FLAG-ACTIVITY-NO-HISTORY" class="headerlink" title="三、FLAG_ACTIVITY_NO_HISTORY:"></a>三、FLAG_ACTIVITY_NO_HISTORY:</h5><p>例如现在栈的情况为：A B C 。C通过intent跳转到D，这个intent添加FLAG_ACTIVITY_NO_HISTORY标志，此时界面显示D的内容，但是它并不会压入栈中。<br>如果按返回键，返回到C，栈的情况是：A  B  C。如果D中又跳转到E，栈的情况为：A B C E,此时按返回键会回到C，因为D根本就没有被压入栈中。</p>
+<h5 id="四、FLAG-ACTIVITY-SINGLE-TOP"><a href="#四、FLAG-ACTIVITY-SINGLE-TOP" class="headerlink" title="四、FLAG_ACTIVITY_SINGLE_TOP:"></a>四、FLAG_ACTIVITY_SINGLE_TOP:</h5><p>和Activity的Launch mode的singleTop类似。如果某个intent设置了这个标志，并且这个intent的目标Activity就是栈顶的Activity，那么将不会新建一个实例压入栈中。<br>简言之，目标Activity已在栈顶则跳转过去，不在栈顶则在栈顶新建Activity。</p>
+<ul>
+<li>如果遇到这种错误</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java">
+Caused by<span class="token operator">:</span> android<span class="token punctuation">.</span>util<span class="token punctuation">.</span>AndroidRuntimeException<span class="token operator">:</span> Calling <span class="token function">startActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag<span class="token punctuation">.</span> Is <span class="token keyword">this</span> really what you want<span class="token operator">?</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>Context中有一个startActivity方法，Activity继承自Context，覆写了startActivity方法。<br>如果使用Activity的startActivity方法，不会有任何问题，而如果使用Context的startActivity方法，<br>就必须新建一个Activity栈，遇到上面的异常，是因为使用了Context的startActivity方法。</p>
+<p>解决的办法是：为intent设置一个flag，即</p>
+<pre class="line-numbers language-java"><code class="language-java">intent<span class="token punctuation">.</span><span class="token function">setFlags</span><span class="token punctuation">(</span>Intent<span class="token punctuation">.</span>FLAG_ACTIVITY_NEW_TASK<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样就可以在新的Activity栈里启动这个Activity了。</p>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/android-intent-setflags-fang-fa-zhong-can-shu-zhi-de-han-yi/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/android-imageview-she-zhi-background-he-src-de-qu-bie/" >Android ImageView设置background和src的区别</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="一、ImageView设置background和src的区别。"><a href="#一、ImageView设置background和src的区别。" class="headerlink" title="一、ImageView设置background和src的区别。"></a>一、ImageView设置background和src的区别。</h4><ul>
+<li>1.src是图片内容（前景），bg是背景，可以同时使用。</li>
+<li>2.background会根据ImageView组件给定的长宽进行拉伸，而src就存放的是原图的大小，不会进行拉伸 。</li>
+<li>3.scaleType只对src起作用；bg可设置透明度。</li>
+</ul>
+<h4 id="二、ImageView几种不同的设置图片的方式。"><a href="#二、ImageView几种不同的设置图片的方式。" class="headerlink" title="二、ImageView几种不同的设置图片的方式。"></a>二、ImageView几种不同的设置图片的方式。</h4><p>设置background：</p>
+<pre class="line-numbers language-java"><code class="language-java">image<span class="token punctuation">.</span><span class="token function">setBackground</span><span class="token punctuation">(</span><span class="token function">getResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDrawable</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>black<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//变形</span>
+image<span class="token punctuation">.</span><span class="token function">setBackgroundResource</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>black<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//变形 </span>
+image<span class="token punctuation">.</span><span class="token function">setBackgroundDrawable</span><span class="token punctuation">(</span><span class="token function">getResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDrawable</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>black<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">////变形</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>设置src:</p>
+<pre class="line-numbers language-java"><code class="language-java">image<span class="token punctuation">.</span><span class="token function">setImageDrawable</span><span class="token punctuation">(</span><span class="token function">getResources</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDrawable</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>blackk<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//不会变形</span>
+
+Stringpath <span class="token operator">=</span> Environment<span class="token punctuation">.</span><span class="token function">getExternalStorageDirectory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span>File<span class="token punctuation">.</span>separator<span class="token operator">+</span><span class="token string">"test1.jpg"</span><span class="token punctuation">;</span>
+Bitmap bm <span class="token operator">=</span> BitmapFactory<span class="token punctuation">.</span><span class="token function">decodeFile</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+image<span class="token punctuation">.</span><span class="token function">setImageBitmap</span><span class="token punctuation">(</span>bm<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//不会变形</span>
+
+image<span class="token punctuation">.</span><span class="token function">setImageResource</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>drawable<span class="token punctuation">.</span>blackk<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//不会变形</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/android-imageview-she-zhi-background-he-src-de-qu-bie/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/android-ru-he-jian-ting-qian-hou-tai/" >Android-如何监听前后台</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="Android-如何监听前后台"><a href="#Android-如何监听前后台" class="headerlink" title="Android-如何监听前后台"></a>Android-如何监听前后台</h4><p>简单讲讲android如何判断应用切换到后台和应用切换到前台。这个其实很简单，之前需要做一个功能，当app由后台进入前台时需要完成一些逻辑操作，所以在网上查找如何判断app由后台进入前台，最终是解决了问题。这里记录一下。</p>
+<h5 id="一、使用ActivityLifecycleCallbacks简单app进入后台"><a href="#一、使用ActivityLifecycleCallbacks简单app进入后台" class="headerlink" title="一、使用ActivityLifecycleCallbacks简单app进入后台"></a>一、使用ActivityLifecycleCallbacks简单app进入后台</h5><p>有时需要监听到应用在前后台切换并做些处理，一般的做法可能是建立一个BaseActivity，然后全部的Activity都继承它，在BaseActivity的onStart和onStop中计数去处理。这样并不是最好的方式，不做详细介绍，有更好的方式，道理其实差不多，就是借助ActivityLifecycleCallbacks来实现。</p>
+<p>1、 写了一个帮助类</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>cadae<span class="token punctuation">.</span>helpers<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> android<span class="token punctuation">.</span>app<span class="token punctuation">.</span>Activity<span class="token punctuation">;</span>
+<span class="token keyword">import</span> android<span class="token punctuation">.</span>app<span class="token punctuation">.</span>Application<span class="token punctuation">;</span>
+<span class="token keyword">import</span> android<span class="token punctuation">.</span>os<span class="token punctuation">.</span>Bundle<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AppFrontBackHelper</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> OnAppStatusListener mOnAppStatusListener<span class="token punctuation">;</span>
+
+
+  <span class="token keyword">public</span> <span class="token function">AppFrontBackHelper</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">/**
+   * 注册状态监听，仅在Application中使用
+   * @param application
+   * @param listener
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">register</span><span class="token punctuation">(</span>Application application<span class="token punctuation">,</span> OnAppStatusListener listener<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    mOnAppStatusListener <span class="token operator">=</span> listener<span class="token punctuation">;</span>
+    application<span class="token punctuation">.</span><span class="token function">registerActivityLifecycleCallbacks</span><span class="token punctuation">(</span>activityLifecycleCallbacks<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">unRegister</span><span class="token punctuation">(</span>Application application<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    application<span class="token punctuation">.</span><span class="token function">unregisterActivityLifecycleCallbacks</span><span class="token punctuation">(</span>activityLifecycleCallbacks<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">private</span> Application<span class="token punctuation">.</span>ActivityLifecycleCallbacks activityLifecycleCallbacks <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Application<span class="token punctuation">.</span>ActivityLifecycleCallbacks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//打开的Activity数量统计</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> activityStartCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivityCreated</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivityStarted</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      activityStartCount<span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//数值从0变到1说明是从后台切到前台</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>activityStartCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//从后台切到前台</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>mOnAppStatusListener <span class="token operator">!=</span> null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          mOnAppStatusListener<span class="token punctuation">.</span><span class="token function">onFront</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivityResumed</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivityPaused</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivityStopped</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      activityStartCount<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//数值从1到0说明是从前台切到后台</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>activityStartCount <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//从前台切到后台</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>mOnAppStatusListener <span class="token operator">!=</span> null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          mOnAppStatusListener<span class="token punctuation">.</span><span class="token function">onBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivitySaveInstanceState</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">,</span> Bundle outState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActivityDestroyed</span><span class="token punctuation">(</span>Activity activity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">OnAppStatusListener</span><span class="token punctuation">{</span>
+    <span class="token keyword">void</span> <span class="token function">onFront</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="二、Application中使用（注意：仅在Application中才能使用，因为Application的生命周期能监听到每个Activity）"><a href="#二、Application中使用（注意：仅在Application中才能使用，因为Application的生命周期能监听到每个Activity）" class="headerlink" title="二、Application中使用（注意：仅在Application中才能使用，因为Application的生命周期能监听到每个Activity）"></a>二、Application中使用（注意：仅在Application中才能使用，因为Application的生命周期能监听到每个Activity）</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        AppFrontBackHelper helper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AppFrontBackHelper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        helper<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>MyApp<span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">AppFrontBackHelper<span class="token punctuation">.</span>OnAppStatusListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFront</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//应用切到前台处理</span>
+
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//应用切到后台处理</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里在后台我们就可以去做一些事情比如开始一个计时任务 超时时退出登录</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> Timer mTimer<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 计时器，每1秒执行一次任务</span>
+    <span class="token keyword">private</span> MyTimerTask mTimerTask<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 计时任务，判断是否未操作时间到达ns</span>
+    <span class="token keyword">private</span> <span class="token keyword">long</span> mLastActionTime<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 上一次操作时间</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        AppFrontBackHelper helper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AppFrontBackHelper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        helper<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>MyApp<span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">AppFrontBackHelper<span class="token punctuation">.</span>OnAppStatusListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFront</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//应用切到前台处理</span>
+                Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">"TAG"</span><span class="token punctuation">,</span> <span class="token string">"在前台"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                mLastActionTime <span class="token operator">=</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>mTimer <span class="token operator">!=</span> null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                     mTimer<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                 <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//应用切到后台处理</span>
+                Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">"TAG"</span><span class="token punctuation">,</span> <span class="token string">"在后台"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>SharedPrefsHelper<span class="token punctuation">.</span><span class="token function">isLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">startTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 登录成功，开始计时</span>
+  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">startTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>mTimer <span class="token operator">!=</span> null<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      mTimer<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    mTimer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Timer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    mTimerTask <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyTimerTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 初始化上次操作时间为登录成功的时间</span>
+    mLastActionTime <span class="token operator">=</span> System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 每过1s检查一次</span>
+    mTimer<span class="token punctuation">.</span><span class="token function">schedule</span><span class="token punctuation">(</span>mTimerTask<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">"TAG"</span><span class="token punctuation">,</span> <span class="token string">"开始计时了。。。。。。。。。"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">private</span> <span class="token keyword">class</span> <span class="token class-name">MyTimerTask</span> <span class="token keyword">extends</span> <span class="token class-name">TimerTask</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">"TAG"</span><span class="token punctuation">,</span> <span class="token string">"计时中……"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 一小时未操作停止计时并退出登录</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> mLastActionTime <span class="token operator">></span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">3600</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">stopTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 停止计时任务</span>
+        <span class="token function">LogOutAuto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//退出登录状态</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// 停止计时任务</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">stopTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    mTimer<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 计时任务是否完成 赋值</span>
+    SharedPrefsHelper<span class="token punctuation">.</span><span class="token function">setBoolean</span><span class="token punctuation">(</span>Constants<span class="token punctuation">.</span>IS_TIMER_TASK_FINISHED<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 用户按下后退键 初始化值</span>
+    SharedPrefsHelper<span class="token punctuation">.</span><span class="token function">setBoolean</span><span class="token punctuation">(</span>Constants<span class="token punctuation">.</span>USER_PRESSED_BACK<span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">"TAG"</span><span class="token punctuation">,</span><span class="token string">"结束了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Log<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">"TAG"</span><span class="token punctuation">,</span> <span class="token string">"取消计时"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/android-ru-he-jian-ting-qian-hou-tai/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/android-recycleview-nei-bu-item-dian-ji-shi-jian/" >Android-RecycleView内部item点击事件</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="RecyclerView的使用——Item内部控件的点击事件"><a href="#RecyclerView的使用——Item内部控件的点击事件" class="headerlink" title="RecyclerView的使用——Item内部控件的点击事件"></a>RecyclerView的使用——Item内部控件的点击事件</h4><h5 id="一、在adapter中写item点击事件的接口供外部的activity使用"><a href="#一、在adapter中写item点击事件的接口供外部的activity使用" class="headerlink" title="一、在adapter中写item点击事件的接口供外部的activity使用"></a>一、在adapter中写item点击事件的接口供外部的activity使用</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+* item内部的监听接口
+*/</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ItemInnerOnclickListener</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 这个String id 是点击item是想要传的参数</span>
+    <span class="token keyword">void</span> <span class="token function">onItemInnerOnClick</span><span class="token punctuation">(</span><span class="token keyword">int</span> position<span class="token punctuation">,</span> String id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> ItemInnerOnclickListener mItemInnerOnclickListener<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setOnItemOnClickListener</span><span class="token punctuation">(</span>ItemInnerOnclickListener mItemInnerOnclickListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mItemInnerOnclickListener <span class="token operator">=</span> mItemInnerOnclickListener<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在holder中就可以这么去写：(这里我使用了CommonAdapter 所以holder的代码可能不太一样)</p>
+<pre class="line-numbers language-java"><code class="language-java">holder<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>cancel_withdraw<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">OnMultiClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMultiClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// record.id 是activity那边拿到数据后用bean来解析的 传递过来的数据</span>
+    <span class="token comment" spellcheck="true">// public class WithdrawRecordsAdapter extends CommonAdapter&lt;WithdrawRecordBean.Record></span>
+    mItemInnerOnclickListener<span class="token punctuation">.</span><span class="token function">onItemInnerOnClick</span><span class="token punctuation">(</span>position<span class="token punctuation">,</span> record<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="二、在activity中我们就可以这么去写"><a href="#二、在activity中我们就可以这么去写" class="headerlink" title="二、在activity中我们就可以这么去写"></a>二、在activity中我们就可以这么去写</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">private</span> WithdrawRecordsAdapter withdrawRecordsAdapter<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-java"><code class="language-java">withdrawRecordsAdapter<span class="token punctuation">.</span><span class="token function">setOnItemOnClickListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">WithdrawRecordsAdapter<span class="token punctuation">.</span>ItemInnerOnclickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token annotation punctuation">@Override</span>
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onItemInnerOnClick</span><span class="token punctuation">(</span><span class="token keyword">int</span> position<span class="token punctuation">,</span> String id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">showDialog</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span>position<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里我们设置点击事件的时候去new了一个adapter中点击事件的接口，并且我们还可以拿到adapter中点击时想要传递的String id 去做一些事情</p>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/android-recycleview-nei-bu-item-dian-ji-shi-jian/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/rust-bi-bao/" >Rust 闭包</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="快速掌握Rust闭包"><a href="#快速掌握Rust闭包" class="headerlink" title="快速掌握Rust闭包"></a>快速掌握Rust闭包</h4><p><em>闭包(Closure) : 也叫Lambda表达式或匿名函数。</em></p>
+<p>不像普通函数，闭包可以对参数和返回类型进行推断，大多数时候都不需要写出来。以下定义都是合法的：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token operator">||</span> <span class="token number">42</span><span class="token punctuation">;</span>
+<span class="token operator">|</span>x<span class="token operator">|</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token operator">|</span>x<span class="token punctuation">:</span>i32<span class="token operator">|</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token closure-params"><span class="token punctuation">|</span>x<span class="token punctuation">:</span>i32<span class="token punctuation">|</span></span> <span class="token punctuation">-></span> i32 <span class="token punctuation">{</span> x <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在上面的例子中，如果是单行语句且没有标注返回类型的时候，花括号是可选的。</p>
+<ul>
+<li>闭包可以像任何其他对象一样绑定到某个变量,然后可以像调用函数一样调用闭包</li>
+</ul>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token operator">|</span>x<span class="token operator">|</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token function">println!</span><span class="token punctuation">(</span><span class="token string">"x is {}"</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>打印结果如下：</p>
+<pre class="line-numbers language-rust"><code class="language-rust">x is <span class="token number">6</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>也可以在定义的地方直接调用:</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">let</span> r <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">|</span>x<span class="token operator">|</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// r == 3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>闭包可以捕获外部的环境变量（自由变量）。</li>
+</ul>
+<p>闭包捕获变量的方式分为三类：引用（&amp;T）、可变引用（&amp;mut T）和值（T）。捕获变量时，闭包会根据上面列出的顺序（从约束最少到约束最多），优先按引用捕获，必要时才会使用后面的捕获方式：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 闭包按引用捕获变量x，因为println!只需要引用参数</span>
+<span class="token keyword">let</span> show_x <span class="token operator">=</span> <span class="token operator">||</span> <span class="token function">println!</span><span class="token punctuation">(</span><span class="token string">"x = {}"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">show_x</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>外部变量的引用保存在show_x对象中，对外部变量的借用持续到show_x离开作用域为止。</p>
+<p>下面是一个捕获可变引用的例子：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">let</span> <span class="token keyword">mut</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 闭包按可变引用捕获变量count </span>
+<span class="token comment" spellcheck="true">// incr也必须是可变的，因为它持有可变引用，调用incr会改变闭包的状态</span>
+<span class="token keyword">let</span> <span class="token keyword">mut</span> incr <span class="token operator">=</span> <span class="token closure-params"><span class="token punctuation">|</span><span class="token punctuation">|</span></span> <span class="token punctuation">{</span> count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token function">println!</span><span class="token punctuation">(</span><span class="token string">"count = {}"</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">incr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>下面的代码演示了闭包转移捕获变量所有权时的情况（捕获变量的值）：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">use</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>mem<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// b是不可复制类型，因此按值捕获时所有权会转移</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> Box<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token closure-params"><span class="token punctuation">|</span><span class="token punctuation">|</span></span> <span class="token punctuation">{</span>
+    <span class="token function">println!</span><span class="token punctuation">(</span><span class="token string">"b = {}"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// drop函数取T类型，因此闭包会按值捕获变量b</span>
+    mem<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">drop</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>调用闭包后b的所有权已经转移，无法再访问：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token comment" spellcheck="true">// 编译错误</span>
+<span class="token function">println!</span><span class="token punctuation">(</span><span class="token string">"b = {}"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>同样，因为b的所有权已经转移，无法再次调用这个闭包：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token comment" spellcheck="true">// 编译错误</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如果要强制按值捕获，可以在闭包前添加关键字move：</p>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token keyword">move</span> <span class="token closure-params"><span class="token punctuation">|</span><span class="token punctuation">|</span></span> <span class="token punctuation">{</span>
+    <span class="token function">println!</span><span class="token punctuation">(</span><span class="token string">"b = {}"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>同样地，调用闭包后b的所有权已经转移，无法再访问。</p>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/rust-bi-bao/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/idea-po-jie/" >IDEA 破解</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h4 id="2020-09-024-亲测有效：IntelliJ-IDEA-2020-2-最新全家桶系列产品激活破解方法-JetBrains-全家桶激活"><a href="#2020-09-024-亲测有效：IntelliJ-IDEA-2020-2-最新全家桶系列产品激活破解方法-JetBrains-全家桶激活" class="headerlink" title="2020-09-024 亲测有效：IntelliJ IDEA 2020.2 最新全家桶系列产品激活破解方法, JetBrains 全家桶激活"></a>2020-09-024 亲测有效：IntelliJ IDEA 2020.2 最新全家桶系列产品激活破解方法, JetBrains 全家桶激活</h4><h5 id="激活方法"><a href="#激活方法" class="headerlink" title="激活方法"></a>激活方法</h5><h5 id="1、下载最新版的idea-正常安装"><a href="#1、下载最新版的idea-正常安装" class="headerlink" title="1、下载最新版的idea 正常安装"></a>1、下载最新版的idea 正常安装</h5><h5 id="2、选择免费试用30天"><a href="#2、选择免费试用30天" class="headerlink" title="2、选择免费试用30天"></a>2、选择免费试用30天</h5><p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20201021130024.png"></p>
+<h5 id="3、进入到idea中后-将压缩包拖进idea-并重启"><a href="#3、进入到idea中后-将压缩包拖进idea-并重启" class="headerlink" title="3、进入到idea中后 将压缩包拖进idea 并重启"></a>3、进入到idea中后 将压缩包拖进idea 并重启</h5><p><strong>[<a target="_blank" rel="noopener" href="https://justcode.ikeepstudying.com/wp-content/uploads/2020/09/jetbrains-agent.zip">jetbrains-agent.zip 下载地址</a>]</strong></p>
+<h5 id="4、输入安装参数"><a href="#4、输入安装参数" class="headerlink" title="4、输入安装参数"></a>4、输入安装参数</h5><pre><code>LFq51qqupnaiTNn39w6zATiOTxZI2JYuRJEBlzmUDv4zeeNlXhMgJZVb0q5QkLr+CIUrSuNB7ucifrGXawLB4qswPOXYG7+ItDNUR/9UkLTUWlnHLX07hnR1USOrWIjTmbytcIKEdaI6x0RskyotuItj84xxoSBP/iRBW2EHpOc
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20201021130345.png"></p>
+<h5 id="5、会询问你是否重启，重启就完事了"><a href="#5、会询问你是否重启，重启就完事了" class="headerlink" title="5、会询问你是否重启，重启就完事了"></a>5、会询问你是否重启，重启就完事了</h5><h2 id="下面是原文地址"><a href="#下面是原文地址" class="headerlink" title="下面是原文地址"></a>下面是原文地址</h2><p><strong>[<a target="_blank" rel="noopener" href="https://justcode.ikeepstudying.com/2020/09/2020-09-09-%e4%ba%b2%e6%b5%8b%e6%9c%89%e6%95%88%ef%bc%9aintellij-idea-2020-2-%e6%9c%80%e6%96%b0%e5%85%a8%e5%ae%b6%e6%a1%b6%e7%b3%bb%e5%88%97%e4%ba%a7%e5%93%81%e6%bf%80%e6%b4%bb%e7%a0%b4%e8%a7%a3/">原文地址</a>]</strong></p>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/idea-po-jie/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/rust-suo-sui-zhi-shi-ji-lu-ban/" >Rust 琐碎知识记录板</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="下面是Rust的一些琐碎知识"><a href="#下面是Rust的一些琐碎知识" class="headerlink" title="下面是Rust的一些琐碎知识"></a>下面是Rust的一些琐碎知识</h3><h5 id="1、format-宏"><a href="#1、format-宏" class="headerlink" title="1、format!宏"></a>1、format!宏</h5><ul>
+<li>format!: write formatted text to String  这个宏可以将一个文本格式化成String类型（可变字符串，在堆上面分配空间），类似于C#中的String.Format方法。</li>
+</ul>
+<pre class="line-numbers language-rust"><code class="language-rust"><span class="token keyword">let</span> world <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> text <span class="token operator">=</span> <span class="token function">format!</span><span class="token punctuation">(</span><span class="token string">"Hello {}!"</span><span class="token punctuation">,</span> world<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>这样text的类型就会是String</p>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/rust-suo-sui-zhi-shi-ji-lu-ban/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/10/21/chang-yong-ming-ling/" >常用命令</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-10-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="下面总结一下常用的命令"><a href="#下面总结一下常用的命令" class="headerlink" title="下面总结一下常用的命令"></a>下面总结一下常用的命令</h3><ul>
+<li>1、Mac系统查看端口占用和杀死进程</li>
+</ul>
+<pre><code>lsof -i tcp:8080</code></pre>
+<p>该命令会显示8080端口的占用情况，有pid，可以根据pid关掉该进程</p>
+<pre><code>kill -9 pid号</code></pre>
+<ul>
+<li>2、</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2020/10/21/chang-yong-ming-ling/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+
+   
+    
+     <a href="/page/2/" type="button" class="btn btn-default"><i class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+      
+
+        <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+ 
+       <a href="/page/4/" type="button" class="btn btn-default ">下一页<i class="fa fa-arrow-circle-o-right"></i></a>     
+        
+
+  
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+	<div class="widget">
+		<h4>分类</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/Android/">Android<span>11</span></a></li>
+		
+			<li><a href="/categories/Appium/">Appium<span>1</span></a></li>
+		
+			<li><a href="/categories/ETH智能合约/">ETH智能合约<span>1</span></a></li>
+		
+			<li><a href="/categories/Fail2ban/">Fail2ban<span>1</span></a></li>
+		
+			<li><a href="/categories/IDEA/">IDEA<span>1</span></a></li>
+		
+			<li><a href="/categories/Java/">Java<span>1</span></a></li>
+		
+			<li><a href="/categories/Linux/">Linux<span>6</span></a></li>
+		
+			<li><a href="/categories/Mac/">Mac<span>3</span></a></li>
+		
+			<li><a href="/categories/NFT/">NFT<span>1</span></a></li>
+		
+			<li><a href="/categories/Redis/">Redis<span>1</span></a></li>
+		
+			<li><a href="/categories/Rust/">Rust<span>3</span></a></li>
+		
+			<li><a href="/categories/Ubuntu/">Ubuntu<span>1</span></a></li>
+		
+			<li><a href="/categories/github/">github<span>1</span></a></li>
+		
+			<li><a href="/categories/mysql/">mysql<span>1</span></a></li>
+		
+			<li><a href="/categories/nginx/">nginx<span>1</span></a></li>
+		
+			<li><a href="/categories/oh-my-zsh/">oh my zsh<span>1</span></a></li>
+		
+			<li><a href="/categories/rails/">rails<span>2</span></a></li>
+		
+			<li><a href="/categories/redis/">redis<span>1</span></a></li>
+		
+			<li><a href="/categories/web前端/">web前端<span>1</span></a></li>
+		
+			<li><a href="/categories/图床/">图床<span>1</span></a></li>
+		
+			<li><a href="/categories/钓鱼网站/">钓鱼网站<span>1</span></a></li>
+		
+		</ul>
+	</div>
+
+		
+			
+	<div class="widget">
+		<h4>标签云</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/逆向工程/">逆向工程<span>1</span></a></li>
+		
+			<li><a href="/tags/Linux/">Linux<span>5</span></a></li>
+		
+			<li><a href="/tags/Intent/">Intent<span>1</span></a></li>
+		
+			<li><a href="/tags/fragment/">fragment<span>1</span></a></li>
+		
+			<li><a href="/tags/单例模式/">单例模式<span>1</span></a></li>
+		
+			<li><a href="/tags/chmod/">chmod<span>1</span></a></li>
+		
+			<li><a href="/tags/jsDelivr/">jsDelivr<span>1</span></a></li>
+		
+			<li><a href="/tags/IDEA/">IDEA<span>1</span></a></li>
+		
+			<li><a href="/tags/EditText/">EditText<span>1</span></a></li>
+		
+			<li><a href="/tags/Java/">Java<span>2</span></a></li>
+		
+			<li><a href="/tags/Vim/">Vim<span>1</span></a></li>
+		
+			<li><a href="/tags/Android/">Android<span>2</span></a></li>
+		
+			<li><a href="/tags/RecycleView/">RecycleView<span>2</span></a></li>
+		
+			<li><a href="/tags/腾讯云服务器/">腾讯云服务器<span>1</span></a></li>
+		
+			<li><a href="/tags/防火墙/">防火墙<span>1</span></a></li>
+		
+			<li><a href="/tags/eth/">eth<span>2</span></a></li>
+		
+			<li><a href="/tags/安卓开发/">安卓开发<span>1</span></a></li>
+		
+			<li><a href="/tags/表单验证/">表单验证<span>1</span></a></li>
+		
+			<li><a href="/tags/ubuntu/">ubuntu<span>8</span></a></li>
+		
+			<li><a href="/tags/hexo/">hexo<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>58</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>最新文章</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2021/10/12/appium-zi-dong-hua-ce-shi/" ><i class="fa fa-file-o"></i>appium自动化测试</a>
+      </li>
+    
+      <li>
+        <a href="/2021/07/30/deploy-a-nft-art-and-transfer-in-eth-testnet/" ><i class="fa fa-file-o"></i>deploy a nft art and transf...</a>
+      </li>
+    
+      <li>
+        <a href="/2021/07/01/ji-yi-ci-bei-diao-yu-wang-zhan-dao-zou-eth-de-jing-li/" ><i class="fa fa-file-o"></i>记一次被钓鱼网站盗走eth的经历</a>
+      </li>
+    
+      <li>
+        <a href="/2021/06/25/android-tablayout-viewpager2-fragment-ni-ke-neng-yong-cuo-liao/" ><i class="fa fa-file-o"></i>Android tablayout viewpager...</a>
+      </li>
+    
+      <li>
+        <a href="/2021/06/22/android-zhong-de-dan-li-mo-shi/" ><i class="fa fa-file-o"></i>Android 中的单例模式</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>链接</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="false"></i><a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" title="" target="_blank"]);">hexo-theme-bithack</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  &copy; 2024 Weaver Li's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+   </html>

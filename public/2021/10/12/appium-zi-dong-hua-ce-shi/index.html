@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>appium自动化测试 | Weaver Li</title>
+  <meta name="author" content="Weaver Li">
+  
+  <meta name="description" content="Time is money!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="appium自动化测试"/>
+  <meta property="og:site_name" content="Weaver Li"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Weaver Li" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70812759-1');
+</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Weaver Li</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> appium自动化测试</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h4 id="使用Appium对Android-App-进行自动化测试"><a href="#使用Appium对Android-App-进行自动化测试" class="headerlink" title="使用Appium对Android App 进行自动化测试"></a>使用Appium对Android App 进行自动化测试</h4><h5 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h5><ul>
+<li>node v16.3.0</li>
+<li>python 2.7</li>
+<li>java 13.0.1</li>
+<li>android sdk 31</li>
+</ul>
+<h4 id="二、概述"><a href="#二、概述" class="headerlink" title="二、概述"></a>二、概述</h4><blockquote>
+<p>Appium是一个自动化开源工具，支持iOS、Android和Windows桌面平台上的原生、移动Web和混合应用的自动化。<br>Appium是跨平台的：它允许你用同样的API对多平台（iOS、Android、Windows）写测试。<br>做到在iOS、Android和Windows测试套件之间复用代码。</p>
+</blockquote>
+<h4 id="三、下载安装环境配置"><a href="#三、下载安装环境配置" class="headerlink" title="三、下载安装环境配置"></a>三、下载安装环境配置</h4><p>1、 安装python安装Appium-Python-Client库（写python自动化测试脚本会用到）</p>
+<pre class="line-numbers language-python"><code class="language-python">pip install Appium<span class="token operator">-</span>Python<span class="token operator">-</span>Client<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2、安装SDK</p>
+<p>自行安装即可</p>
+<p>3、安装JDK</p>
+<p>(1) 在<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/">oracle</a>官网下载安装JDK，安装JDK8及以上的版本。</p>
+<p>(2) 安装完成后，设置JDK的环境变量</p>
+<p>(3) 我这里使用的是oh my zsh</p>
+<pre class="line-numbers language-shell"><code class="language-shell">cd ~
+vim .zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell"><code class="language-shell"># 配置ANDROID_HOME环境变量
+export ANDROID_HOME="/Users/liwenyang/Library/Android/sdk/"
+
+# 配置JAVA_HOME环境变量
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+# 配置Android sdk tools adb
+export PATH="$PATH:/Users/liwenyang/Library/Android/sdk/platform-tools"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>将jdk版本号、用户名换成自己的 </p>
+<p>然后 <code>source .zshrc</code></p>
+<h4 id="四、安装appium-server"><a href="#四、安装appium-server" class="headerlink" title="四、安装appium server"></a>四、安装appium server</h4><p>1、在<a href="https://github.com/appium/appium-desktop/releases/tag/v1.22.0">appium官网</a>下载</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012163841.png"></p>
+<p>下载完之后进行安装就行了</p>
+<p>2、设置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012164022.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012164101.png"></p>
+<p>保存并重启就行了</p>
+<p>3、启动</p>
+<p>点击上图中的 start server 出现这个说明启动成功 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012164215.png"></p>
+<h4 id="五、还需要一个东西"><a href="#五、还需要一个东西" class="headerlink" title="五、还需要一个东西"></a>五、还需要一个东西</h4><p>1、用来定位你app页面中的元素的 写自动化脚本会用到</p>
+<p><a href="https://github.com/appium/appium-inspector/releases/tag/v2021.9.2">点击这个下载</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012164617.png"></p>
+<p>正常安装即可</p>
+<p>2、配置</p>
+<p>真机测试 </p>
+<p>USB连接手机，打开手机开发者模式，打开开发者选项中的USB调试、USB安装，小米手机还需要打开USB调试（安全设置），然后在CMD命令行输入adb devices回车，如果出现了手机的设备号，说明连接成功。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012165710.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012165003.png"></p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+<span class="token property">"platformName"</span><span class="token operator">:</span> <span class="token string">"Android"</span><span class="token punctuation">,</span> # 声明是ios还是Android系统
+<span class="token property">"platformVersion"</span><span class="token operator">:</span> <span class="token string">"8.1.0"</span><span class="token punctuation">,</span> # Android内核版本号
+<span class="token property">"deviceName"</span><span class="token operator">:</span> <span class="token string">"MI_5X"</span><span class="token punctuation">,</span> # 连接的设备名称
+<span class="token property">"appPackage"</span><span class="token operator">:</span> <span class="token string">"com.tencent.qqmusic"</span><span class="token punctuation">,</span> # apk的包名
+<span class="token property">"appActivity"</span><span class="token operator">:</span> <span class="token string">".activity.AppStarterActivity"</span><span class="token punctuation">,</span> # apk的launcherActivity
+<span class="token property">"resetKeyboard"</span><span class="token operator">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+<span class="token property">"noReset"</span><span class="token operator">:</span> <span class="token boolean">True</span> # 在开始会话之前不要重置应用程序状态
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>截图中的 appium前缀是勾选那个就可以加上了</p>
+<p>下面点击 start session 就可以了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20211012165937.png"></p>
+<p>这个工具就是方便我们进行定位app内的元素用的</p>
+<h4 id="六、写自动化测试脚本"><a href="#六、写自动化测试脚本" class="headerlink" title="六、写自动化测试脚本"></a>六、写自动化测试脚本</h4><p>随便找一个地方写个 autoTest.py</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> time
+<span class="token keyword">from</span> appium <span class="token keyword">import</span> webdriver
+
+
+caps <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">"platformName"</span><span class="token punctuation">:</span> <span class="token string">"Android"</span><span class="token punctuation">,</span>
+    <span class="token string">"platformVersion"</span><span class="token punctuation">:</span> <span class="token string">"9"</span><span class="token punctuation">,</span>
+    <span class="token string">"deviceName"</span><span class="token punctuation">:</span> <span class="token string">"Note9"</span><span class="token punctuation">,</span>
+    <span class="token string">"appPackage"</span><span class="token punctuation">:</span> <span class="token string">"com.easylife.house.customer"</span><span class="token punctuation">,</span>
+    <span class="token string">"appActivity"</span><span class="token punctuation">:</span> <span class="token string">".ui.pub.GuideActivity"</span><span class="token punctuation">,</span>
+    <span class="token string">"resetKeyboard"</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">"noReset"</span><span class="token punctuation">:</span> <span class="token boolean">True</span>
+<span class="token punctuation">}</span>
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Remote<span class="token punctuation">(</span><span class="token string">"http://localhost:4723/wd/hub"</span><span class="token punctuation">,</span> caps<span class="token punctuation">)</span>
+
+lunch <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/activity_launch"</span><span class="token punctuation">)</span>
+lunch<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/iv_icon2"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>swipe<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">1550</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/iv_icon3"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>swipe<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">1550</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/iv_icon4"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>swipe<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">1550</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/iv_icon5"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>swipe<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">1550</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#点击首页</span>
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/iv_icon1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">"com.easylife.house.customer:id/newHouse"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+driver<span class="token punctuation">.</span>swipe<span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">1550</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span>
+
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>运行这个脚本 <code>python3 autoTest.py</code><br>脚本就可以自动的进行点击 滑动 等操作了</p>
+
+	  <div class="article-footer-copyright">
+
+    本博客采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议(CC BY-NC-SA 4.0) 发布.</a>
+</div>
+
+	</div>
+
+	
+	
+	<div>
+  	<center>
+
+	<div class="pagination">
+
+    
+    
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2021/07/30/deploy-a-nft-art-and-transfer-in-eth-testnet/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	<!--
+<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
+
+-->
+	
+	
+	
+	</div> <!-- col-md-9/col-md-12 -->
+
+
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2021-10-12 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Appium/">Appium<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Android/">Android<span>2</span></a></li> <li><a href="/tags/Mac/">Mac<span>4</span></a></li> <li><a href="/tags/自动化测试/">自动化测试<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		
+
+	</div>
+	
+		
+
+</div><!-- row -->
+
+<!--
+ -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  &copy; 2024 Weaver Li's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+   </html>

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Weaver Li</title>
+  
+  <subtitle>Show Me The Code!</subtitle>
+  <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/"/>
+  <updated>2021-10-12T09:03:33.987Z</updated>
+  <id>https://github.com/Naruto-1996/Naruto-1996.github.io/</id>
+  
+  <author>
+    <name>Weaver Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>appium自动化测试</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/10/12/appium-zi-dong-hua-ce-shi/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/10/12/appium-zi-dong-hua-ce-shi/</id>
+    <published>2021-10-12T08:15:16.000Z</published>
+    <updated>2021-10-12T09:03:33.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;使用Appium对Android-App-进行自动化测试&quot;&gt;&lt;a href=&quot;#使用Appium对Android-App-进行自动化测试&quot; class=&quot;headerlink&quot; title=&quot;使用Appium对Android App</summary>
+        
+      
+    
+    
+    
+    <category term="Appium" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Appium/"/>
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Android/"/>
+    
+    <category term="Mac" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Mac/"/>
+    
+    <category term="自动化测试" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>deploy a nft art and transfer in eth testnet</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/07/30/deploy-a-nft-art-and-transfer-in-eth-testnet/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/07/30/deploy-a-nft-art-and-transfer-in-eth-testnet/</id>
+    <published>2021-07-30T08:57:44.000Z</published>
+    <updated>2021-10-15T01:46:40.006Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;如何在以太坊测试网络上发布一个NFT艺术品并转给他人&quot;&gt;&lt;a href=&quot;#如何在以太坊测试网络上发布一个NFT艺术品并转给他人&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="NFT" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/NFT/"/>
+    
+    
+    <category term="eth" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/eth/"/>
+    
+    <category term="NFT" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/NFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一次被钓鱼网站盗走eth的经历</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/07/01/ji-yi-ci-bei-diao-yu-wang-zhan-dao-zou-eth-de-jing-li/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/07/01/ji-yi-ci-bei-diao-yu-wang-zhan-dao-zou-eth-de-jing-li/</id>
+    <published>2021-07-01T01:51:52.000Z</published>
+    <updated>2021-07-01T02:34:47.606Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;记一次被钓鱼网站盗走ETH的经历&quot;&gt;&lt;a href=&quot;#记一次被钓鱼网站盗走ETH的经历&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="钓鱼网站" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/%E9%92%93%E9%B1%BC%E7%BD%91%E7%AB%99/"/>
+    
+    
+    <category term="eth" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/eth/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android tablayout viewpager2 fragment 你可能用错了</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/06/25/android-tablayout-viewpager2-fragment-ni-ke-neng-yong-cuo-liao/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/06/25/android-tablayout-viewpager2-fragment-ni-ke-neng-yong-cuo-liao/</id>
+    <published>2021-06-25T09:11:29.000Z</published>
+    <updated>2021-06-30T01:47:21.153Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;tabLayout-viewPager2-fragment-用不好会导致内存泄漏&quot;&gt;&lt;a href=&quot;#tabLayout-viewPager2-fragment-用不好会导致内存泄漏&quot; class=&quot;headerlink&quot; title=&quot;tabLayout +</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="tabLayout" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/tabLayout/"/>
+    
+    <category term="viewPager2" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/viewPager2/"/>
+    
+    <category term="fragment" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/fragment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 中的单例模式</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/06/22/android-zhong-de-dan-li-mo-shi/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/06/22/android-zhong-de-dan-li-mo-shi/</id>
+    <published>2021-06-22T07:01:37.000Z</published>
+    <updated>2021-06-22T08:00:49.914Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Android-中的单例模式&quot;&gt;&lt;a href=&quot;#Android-中的单例模式&quot; class=&quot;headerlink&quot; title=&quot;Android 中的单例模式&quot;&gt;&lt;/a&gt;Android 中的单例模式&lt;/h3&gt;&lt;h4 id=&quot;单例模式的优缺点&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="单例模式" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 知识总结</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/06/22/android-zhi-shi-zong-jie/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/06/22/android-zhi-shi-zong-jie/</id>
+    <published>2021-06-22T06:37:27.000Z</published>
+    <updated>2021-06-22T08:07:52.319Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Android-细碎知识总结&quot;&gt;&lt;a href=&quot;#Android-细碎知识总结&quot; class=&quot;headerlink&quot; title=&quot;Android 细碎知识总结&quot;&gt;&lt;/a&gt;Android 细碎知识总结&lt;/h3&gt;&lt;h5</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="总结" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 逆向工程</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/05/19/android-ni-xiang-gong-cheng/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/05/19/android-ni-xiang-gong-cheng/</id>
+    <published>2021-05-19T09:30:53.000Z</published>
+    <updated>2021-05-19T10:16:56.069Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Android-逆向工程&quot;&gt;&lt;a href=&quot;#Android-逆向工程&quot; class=&quot;headerlink&quot; title=&quot;Android 逆向工程&quot;&gt;&lt;/a&gt;Android 逆向工程&lt;/h3&gt;&lt;h4 id=&quot;一、需要的工具&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="逆向工程" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    
+    <category term="Mac" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>recycleView去掉滑动边界阴影</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/04/27/recycleview-qu-diao-hua-dong-bian-jie-yin-ying/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/04/27/recycleview-qu-diao-hua-dong-bian-jie-yin-ying/</id>
+    <published>2021-04-27T01:10:31.000Z</published>
+    <updated>2021-10-15T01:50:15.333Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;RecycleView-去掉滑动边界的阴影&quot;&gt;&lt;a href=&quot;#RecycleView-去掉滑动边界的阴影&quot; class=&quot;headerlink&quot; title=&quot;RecycleView 去掉滑动边界的阴影&quot;&gt;&lt;/a&gt;RecycleView</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="RecycleView" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/RecycleView/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu权限详解</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/29/ubuntu-quan-xian-xiang-jie/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/29/ubuntu-quan-xian-xiang-jie/</id>
+    <published>2021-03-29T08:40:43.000Z</published>
+    <updated>2021-03-29T09:08:50.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Ubuntu权限详解&quot;&gt;&lt;a href=&quot;#Ubuntu权限详解&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Linux/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器安装oh_my_zsh</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/29/fu-wu-qi-an-zhuang-oh-my-zsh/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/29/fu-wu-qi-an-zhuang-oh-my-zsh/</id>
+    <published>2021-03-29T01:58:30.000Z</published>
+    <updated>2021-03-29T02:12:22.479Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;给自己的服务器安装-oh-my-zsh&quot;&gt;&lt;a href=&quot;#给自己的服务器安装-oh-my-zsh&quot; class=&quot;headerlink&quot; title=&quot;给自己的服务器安装 oh my zsh&quot;&gt;&lt;/a&gt;给自己的服务器安装 oh my zsh&lt;/h3&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="oh my zsh" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/oh-my-zsh/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+    <category term="linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决服务器连不上github的问题</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/29/jie-jue-fu-wu-qi-lian-bu-shang-github-de-wen-ti/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/29/jie-jue-fu-wu-qi-lian-bu-shang-github-de-wen-ti/</id>
+    <published>2021-03-29T01:24:26.000Z</published>
+    <updated>2021-03-29T01:37:05.099Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;解决服务器连不上github的问题&quot;&gt;&lt;a href=&quot;#解决服务器连不上github的问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="github" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/github/"/>
+    
+    
+    <category term="腾讯云服务器" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ETH智能合约开发</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/19/eth-zhi-neng-he-yue-kai-fa/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/03/19/eth-zhi-neng-he-yue-kai-fa/</id>
+    <published>2021-03-19T08:35:19.000Z</published>
+    <updated>2021-03-25T03:09:50.048Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ETH智能合约开发-vue-智能合约&quot;&gt;&lt;a href=&quot;#ETH智能合约开发-vue-智能合约&quot; class=&quot;headerlink&quot; title=&quot;ETH智能合约开发(vue + 智能合约)&quot;&gt;&lt;/a&gt;ETH智能合约开发(vue +</summary>
+        
+      
+    
+    
+    
+    <category term="ETH智能合约" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/ETH%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
+    
+    
+    <category term="Mac" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Mac/"/>
+    
+    <category term="Solidity" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Solidity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在linux服务器上安装Ruby_On_Rails</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/zai-linux-fu-wu-qi-shang-an-zhuang-ruby-on-rails/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/zai-linux-fu-wu-qi-shang-an-zhuang-ruby-on-rails/</id>
+    <published>2021-02-02T10:21:58.000Z</published>
+    <updated>2021-10-15T01:48:14.550Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;在linux服务器上安装Ruby-On-Rails&quot;&gt;&lt;a href=&quot;#在linux服务器上安装Ruby-On-Rails&quot; class=&quot;headerlink&quot; title=&quot;在linux服务器上安装Ruby On</summary>
+        
+      
+    
+    
+    
+    <category term="rails" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/rails/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+    <category term="ruby" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ruby/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu下安装redis</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/ubuntu-xia-an-zhuang-redis/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/ubuntu-xia-an-zhuang-redis/</id>
+    <published>2021-02-02T05:57:48.000Z</published>
+    <updated>2021-02-02T06:03:00.728Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;ubuntu下安装redis&quot;&gt;&lt;a href=&quot;#ubuntu下安装redis&quot; class=&quot;headerlink&quot; title=&quot;ubuntu下安装redis&quot;&gt;&lt;/a&gt;ubuntu下安装redis&lt;/h4&gt;&lt;h5 id=&quot;1、使用apt安装&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="redis" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/redis/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+    <category term="linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu下安装mysql</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/ubuntu-xia-an-zhuang-mysql/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/ubuntu-xia-an-zhuang-mysql/</id>
+    <published>2021-02-02T03:05:08.000Z</published>
+    <updated>2021-02-02T04:09:20.759Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;ubuntu下安装mysql&quot;&gt;&lt;a href=&quot;#ubuntu下安装mysql&quot; class=&quot;headerlink&quot; title=&quot;ubuntu下安装mysql&quot;&gt;&lt;/a&gt;ubuntu下安装mysql&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;MySQL</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/mysql/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu下彻底卸载mysql</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/ubuntu-xia-che-di-xie-zai-mysql/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2021/02/02/ubuntu-xia-che-di-xie-zai-mysql/</id>
+    <published>2021-02-02T01:26:49.000Z</published>
+    <updated>2021-02-02T01:41:42.679Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Ubuntu下彻底卸载mysql&quot;&gt;&lt;a href=&quot;#Ubuntu下彻底卸载mysql&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Ubuntu/"/>
+    
+    
+    <category term="mysql" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建服务器ubuntu系统</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/30/da-jian-fu-wu-qi-ubuntu-xi-tong/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/30/da-jian-fu-wu-qi-ubuntu-xi-tong/</id>
+    <published>2020-12-30T07:59:35.000Z</published>
+    <updated>2020-12-30T10:07:45.957Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;购买完服务器后应该做哪些配置&quot;&gt;&lt;a href=&quot;#购买完服务器后应该做哪些配置&quot; class=&quot;headerlink&quot; title=&quot;购买完服务器后应该做哪些配置&quot;&gt;&lt;/a&gt;购买完服务器后应该做哪些配置&lt;/h4&gt;&lt;h5 id=&quot;一-、安装apache&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Linux/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+    <category term="服务器搭建" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android一些常用的背景图</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/18/android-yi-xie-chang-yong-de-bei-jing-tu/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/18/android-yi-xie-chang-yong-de-bei-jing-tu/</id>
+    <published>2020-12-18T08:52:39.000Z</published>
+    <updated>2020-12-18T09:07:13.710Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Android中一些常用的xml背景图&quot;&gt;&lt;a href=&quot;#Android中一些常用的xml背景图&quot; class=&quot;headerlink&quot; title=&quot;Android中一些常用的xml背景图&quot;&gt;&lt;/a&gt;Android中一些常用的xml背景图&lt;/h4&gt;&lt;h5</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="Java" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Java/"/>
+    
+    <category term="背景图" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E8%83%8C%E6%99%AF%E5%9B%BE/"/>
+    
+    <category term="Drawable" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Drawable/"/>
+    
+    <category term="xml" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/xml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android自定义EditText一键清除和密文查看</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/18/android-zi-ding-yi-edittext-yi-jian-qing-chu-he-mi-wen-cha-kan/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/18/android-zi-ding-yi-edittext-yi-jian-qing-chu-he-mi-wen-cha-kan/</id>
+    <published>2020-12-18T08:26:41.000Z</published>
+    <updated>2020-12-18T08:50:55.507Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Android自定义EditText一键清除和密文查看&quot;&gt;&lt;a href=&quot;#Android自定义EditText一键清除和密文查看&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Android" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Android/"/>
+    
+    
+    <category term="EditText" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/EditText/"/>
+    
+    <category term="密文" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E5%AF%86%E6%96%87/"/>
+    
+    <category term="一键清除" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/%E4%B8%80%E9%94%AE%E6%B8%85%E9%99%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux(ubuntu) - 使用fail2ban 为nginx保驾护航</title>
+    <link href="https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/09/linux-ubuntu-shi-yong-fail2ban-wei-nginx-bao-jia-hu-hang/"/>
+    <id>https://github.com/Naruto-1996/Naruto-1996.github.io/2020/12/09/linux-ubuntu-shi-yong-fail2ban-wei-nginx-bao-jia-hu-hang/</id>
+    <published>2020-12-09T07:40:46.000Z</published>
+    <updated>2020-12-09T09:47:03.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;Linux-ubuntu-使用fail2ban-为nginx保驾护航&quot;&gt;&lt;a href=&quot;#Linux-ubuntu-使用fail2ban-为nginx保驾护航&quot; class=&quot;headerlink&quot; title=&quot;Linux(ubuntu) -</summary>
+        
+      
+    
+    
+    
+    <category term="Fail2ban" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/categories/Fail2ban/"/>
+    
+    
+    <category term="ubuntu" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/ubuntu/"/>
+    
+    <category term="Linux" scheme="https://github.com/Naruto-1996/Naruto-1996.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+</feed>
