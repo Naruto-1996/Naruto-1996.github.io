@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>Android intent.setFlags方法中参数值的含义 | Weaver Li</title>
+  <meta name="author" content="Weaver Li">
+  
+  <meta name="description" content="Time is money!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Android intent.setFlags方法中参数值的含义"/>
+  <meta property="og:site_name" content="Weaver Li"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Weaver Li" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70812759-1');
+</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Weaver Li</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> Android intent.setFlags方法中参数值的含义</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h4 id="Android中intent-setFlags方法中参数值的含义"><a href="#Android中intent-setFlags方法中参数值的含义" class="headerlink" title="Android中intent.setFlags方法中参数值的含义"></a>Android中intent.setFlags方法中参数值的含义</h4><h5 id="一、FLAG-ACTIVITY-NEW-TASK"><a href="#一、FLAG-ACTIVITY-NEW-TASK" class="headerlink" title="一、FLAG_ACTIVITY_NEW_TASK:"></a>一、FLAG_ACTIVITY_NEW_TASK:</h5><p>例如现在栈一的情况是：A    B   C(C位于栈顶)，C通过intent跳转到D，并且这个Intent添加了FLAG_ACTIVITY_NEW_TASK标记，<br>如果D这个Activity在Manifest.xml中声明了添加Task affinity，系统首先会查找有没有和D的Task affinity相同的task栈存在，<br>如果存在，就将D压入那个栈，如果不存在则会新建一个D的affinity的栈将其压入。如果D的Task affinity默认没有设置，则会将其压入栈1，变成A B C D，<br>这样就和不加FLAG_ACTIVITY_NEW_TASK标记效果是一样的了。但如果试图从非Activity的非正常途径启动一个activity，<br>比如从一个service、BroadcastReceiver等中启动一个Activity，则intent要设置Intent.FLAG_ACTIVITY_NEW_TASK标记。<br>Activity要存在于Activity栈中，而非Activity的途径启动Activity时必然不存在一个Activity的栈，<br>所以要新建一个Activity栈来存放要启动的Activity。</p>
+<h5 id="二、FLAG-ACTIVITY-CLEAR-TOP"><a href="#二、FLAG-ACTIVITY-CLEAR-TOP" class="headerlink" title="二、FLAG_ACTIVITY_CLEAR_TOP:"></a>二、FLAG_ACTIVITY_CLEAR_TOP:</h5><p>例如现在的栈情况为A B C D, D此时通过intent跳转到B，如果这个intent设置FLAG_ACTIVITY_CLEAR_TOP标记，则栈情况变为:A B。如果没有添加这个标记，则栈的情况将会变为：A B C D B 。<br>也就是说，如果设置了FLAG_ACTIVITY_CLEAR_TOP标记，并且目标Activity在栈中已存在，<br>则会把位于该目标Activity之上的Activity从栈中弹出销毁。</p>
+<h5 id="三、FLAG-ACTIVITY-NO-HISTORY"><a href="#三、FLAG-ACTIVITY-NO-HISTORY" class="headerlink" title="三、FLAG_ACTIVITY_NO_HISTORY:"></a>三、FLAG_ACTIVITY_NO_HISTORY:</h5><p>例如现在栈的情况为：A B C 。C通过intent跳转到D，这个intent添加FLAG_ACTIVITY_NO_HISTORY标志，此时界面显示D的内容，但是它并不会压入栈中。<br>如果按返回键，返回到C，栈的情况是：A  B  C。如果D中又跳转到E，栈的情况为：A B C E,此时按返回键会回到C，因为D根本就没有被压入栈中。</p>
+<h5 id="四、FLAG-ACTIVITY-SINGLE-TOP"><a href="#四、FLAG-ACTIVITY-SINGLE-TOP" class="headerlink" title="四、FLAG_ACTIVITY_SINGLE_TOP:"></a>四、FLAG_ACTIVITY_SINGLE_TOP:</h5><p>和Activity的Launch mode的singleTop类似。如果某个intent设置了这个标志，并且这个intent的目标Activity就是栈顶的Activity，那么将不会新建一个实例压入栈中。<br>简言之，目标Activity已在栈顶则跳转过去，不在栈顶则在栈顶新建Activity。</p>
+<ul>
+<li>如果遇到这种错误</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Caused by: android.util.AndroidRuntimeException: Calling <span class="title function_">startActivity</span><span class="params">()</span> from outside of an Activity  context <span class="keyword">requires</span> the FLAG_ACTIVITY_NEW_TASK flag. Is <span class="built_in">this</span> really what you want?</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>Context中有一个startActivity方法，Activity继承自Context，覆写了startActivity方法。<br>如果使用Activity的startActivity方法，不会有任何问题，而如果使用Context的startActivity方法，<br>就必须新建一个Activity栈，遇到上面的异常，是因为使用了Context的startActivity方法。</p>
+<p>解决的办法是：为intent设置一个flag，即</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br></pre></td></tr></table></figure>
+<p>这样就可以在新的Activity栈里启动这个Activity了。</p>
+
+	  <div class="article-footer-copyright">
+
+    本博客采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议(CC BY-NC-SA 4.0) 发布.</a>
+</div>
+
+	</div>
+
+	
+	
+	<div>
+  	<center>
+
+	<div class="pagination">
+
+    
+    
+    <a href="/2020/11/18/zsh-permission-denied-解决办法/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2020/10/21/Android-ImageView设置background和src的区别/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	<!--
+<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
+
+-->
+	
+	
+	
+	</div> <!-- col-md-9/col-md-12 -->
+
+
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-10-21 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Android/">Android<span>11</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Intent/">Intent<span>1</span></a></li> <li><a href="/tags/setFlags/">setFlags<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		
+
+	</div>
+	
+		
+
+</div><!-- row -->
+
+<!--
+ -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  &copy; 2024 Weaver Li's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>

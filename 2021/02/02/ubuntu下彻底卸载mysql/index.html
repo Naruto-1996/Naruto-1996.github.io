@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>ubuntu下彻底卸载mysql | Weaver Li</title>
+  <meta name="author" content="Weaver Li">
+  
+  <meta name="description" content="Time is money!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="ubuntu下彻底卸载mysql"/>
+  <meta property="og:site_name" content="Weaver Li"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Weaver Li" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70812759-1');
+</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Weaver Li</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> ubuntu下彻底卸载mysql</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h4 id="Ubuntu下彻底卸载mysql"><a href="#Ubuntu下彻底卸载mysql" class="headerlink" title="Ubuntu下彻底卸载mysql"></a>Ubuntu下彻底卸载mysql</h4><blockquote>
+<p>采用sudo apt install mysql-server命令的方式默认安装的是MySQL5.7，MySQL5.7版本最高只适配到Ubuntu17.04，<br>不支持Ubuntu18.04，MySQL8.0可适配到Ubuntu18.04故如果系统使用的Ubuntu18.04，<br>只能安装MySQL8.0，而且加密方式需要选择5.x的加密，因为有兼容性问题，如果你已经执行了上边的命令，安装了MySQL5.7，需要先卸载。</p>
+</blockquote>
+<h5 id="1、首先在系统终端中查看MySQL的依赖项，运行命令：dpkg-list-grep-mysql"><a href="#1、首先在系统终端中查看MySQL的依赖项，运行命令：dpkg-list-grep-mysql" class="headerlink" title="1、首先在系统终端中查看MySQL的依赖项，运行命令：dpkg --list|grep mysql"></a>1、首先在系统终端中查看MySQL的依赖项，运行命令：<code>dpkg --list|grep mysql</code></h5><p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20210202093257.png"></p>
+<h5 id="2、卸载-sudo-apt-get-remove-mysql-common"><a href="#2、卸载-sudo-apt-get-remove-mysql-common" class="headerlink" title="2、卸载 sudo apt-get remove mysql-common"></a>2、卸载 <code>sudo apt-get remove mysql-common</code></h5><p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20210202093512.png"></p>
+<p>卸载 <code>sudo apt-get autoremove --purge mysql-server-5.7</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20210202093713.png"></p>
+<h4 id="3、清除残留数据，运行命令：dpkg-l-grep-rc-awk-print-2-sudo-xargs-dpkg-P"><a href="#3、清除残留数据，运行命令：dpkg-l-grep-rc-awk-print-2-sudo-xargs-dpkg-P" class="headerlink" title="3、清除残留数据，运行命令：dpkg -l|grep ^rc|awk &#39;{print$2}&#39;|sudo xargs dpkg -P"></a>3、清除残留数据，运行命令：<code>dpkg -l|grep ^rc|awk &#39;&#123;print$2&#125;&#39;|sudo xargs dpkg -P</code></h4><p><img src="https://cdn.jsdelivr.net/gh/Naruto-1996/picture/images/20210202093832.png"></p>
+<h4 id="4、再次查看MySQL的剩余依赖项，运行命令：dpkg-list-grep-mysql"><a href="#4、再次查看MySQL的剩余依赖项，运行命令：dpkg-list-grep-mysql" class="headerlink" title="4、再次查看MySQL的剩余依赖项，运行命令：dpkg --list|grep mysql"></a>4、再次查看MySQL的剩余依赖项，运行命令：<code>dpkg --list|grep mysql</code></h4><blockquote>
+<p> 如果还有依赖项 就继续删除剩余依赖项，比如：sudo apt-get autoremove –purge mysql-apt-config<br> 如果没有那就表示删除干净了</p>
+</blockquote>
+
+	  <div class="article-footer-copyright">
+
+    本博客采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议(CC BY-NC-SA 4.0) 发布.</a>
+</div>
+
+	</div>
+
+	
+	
+	<div>
+  	<center>
+
+	<div class="pagination">
+
+    
+    
+    <a href="/2021/02/02/ubuntu下安装mysql/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2020/12/30/搭建服务器ubuntu系统/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	<!--
+<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
+
+-->
+	
+	
+	
+	</div> <!-- col-md-9/col-md-12 -->
+
+
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2021-02-02 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Ubuntu/">Ubuntu<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/mysql/">mysql<span>2</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		
+
+	</div>
+	
+		
+
+</div><!-- row -->
+
+<!--
+ -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  &copy; 2024 Weaver Li's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>

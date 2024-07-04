@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>给服务器设置ssh免密码登录 | Weaver Li</title>
+  <meta name="author" content="Weaver Li">
+  
+  <meta name="description" content="Time is money!">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="给服务器设置ssh免密码登录"/>
+  <meta property="og:site_name" content="Weaver Li"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Weaver Li" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/prism.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-70812759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-70812759-1');
+</script>
+
+
+
+
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Weaver Li</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> 给服务器设置ssh免密码登录</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h4 id="给服务器设置ssh免密码登录"><a href="#给服务器设置ssh免密码登录" class="headerlink" title="给服务器设置ssh免密码登录"></a>给服务器设置ssh免密码登录</h4><h4 id="SSH是什么？"><a href="#SSH是什么？" class="headerlink" title="SSH是什么？"></a>SSH是什么？</h4><blockquote>
+<p>SSH 为 Secure Shell 的缩写，由IETF的网络工作小组（Network Working Group）所制定；SSH为建立在应用层和传输层基础上的安全协议。<br>SSH是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH协议可以有效防止远程管理过程中的信息泄露问题。<br>SSH最初是UNIX系统上的一个程序，后来又迅速扩展到其他操作平台。SSH在正确使用时可弥补网络中的漏洞。SSH客户端适用于多种平台。<br>几乎所有UNIX平台—包括HP-UX、Linux、AIX、Solaris、Digital UNIX、Irix，以及其他平台，都可运行SSH。</p>
+</blockquote>
+<ul>
+<li>简单来理解，就是我拥有一台服务器，我现在想要登录上去做一些事情，那就得使用ssh登录到远程的服务器上，才能在上面进行操作。</li>
+</ul>
+<h4 id="SSH-服务端以及客户端配置"><a href="#SSH-服务端以及客户端配置" class="headerlink" title="SSH 服务端以及客户端配置"></a>SSH 服务端以及客户端配置</h4><h5 id="启动-sshd-服务"><a href="#启动-sshd-服务" class="headerlink" title="启动 sshd 服务"></a>启动 sshd 服务</h5><blockquote>
+<p>一开始在远程服务器上面，需要查看一下他的sshd服务启动了没有，如果没有启动，任何客户端主机是连接不上来的，一般如果是自己在云厂商处购买了主机，主机启动的时候就会把sshd服务启动起来。但有可能自己在测试环境搭建机器的时候，是没有默认启动的，这时候就需要在测试机器的终端看一下，命令如下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@VM-0-16-ubuntu:~$ ps -ef | grep sshd</span><br><span class="line">root      1221     1  0 Dec07 ?        00:00:00 /usr/sbin/sshd -D</span><br><span class="line">root     15649  1221  0 09:21 ?        00:00:00 sshd: ubuntu [priv]</span><br><span class="line">ubuntu   15740 15649  0 09:21 ?        00:00:00 sshd: ubuntu@pts/0</span><br><span class="line">ubuntu   24863 15741  0 10:24 pts/0    00:00:00 grep --color=auto sshd</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里看到第一行,sshd已经启动起来了,进程号是 1221</p>
+</blockquote>
+<ul>
+<li>如果没有启动的话,那就启动一下,命令如下</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@VM-0-16-ubuntu:~$ service sshd start</span><br></pre></td></tr></table></figure>
+
+<h4 id="登录服务器主机的方式"><a href="#登录服务器主机的方式" class="headerlink" title="登录服务器主机的方式"></a>登录服务器主机的方式</h4><h4 id="1、客户端使用密码的方式登录目标主机"><a href="#1、客户端使用密码的方式登录目标主机" class="headerlink" title="1、客户端使用密码的方式登录目标主机"></a>1、客户端使用密码的方式登录目标主机</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ ssh root@192.168.0.187</span><br><span class="line">root@192.168.0.187&#x27;s password:</span><br></pre></td></tr></table></figure>
+<p>输入密码即可</p>
+<h4 id="2、客户端使用密钥方式登录目标主机-免密码"><a href="#2、客户端使用密钥方式登录目标主机-免密码" class="headerlink" title="2、客户端使用密钥方式登录目标主机(免密码)"></a>2、客户端使用密钥方式登录目标主机(免密码)</h4><blockquote>
+<p>使用场景：</p>
+<p>1、如果某个运维人员临时需要登录一台机器，但是机器的管理员并不想把密码暴露给他，所以会让这个运维人员发一个自己的公钥给自己，帮他添加进去，这个运维人员就可以顺利的登录机器了。在运维做完了自己的事情之后，机器的管理员会把他从公钥列表中删掉，这样一来整个过程，密码没有暴露，运维也在这段时间内登上了机器，很完美。</p>
+<p>2、因为自己懒，不想敲密码,想直接使用自己在电脑上配置的ssh_xxx来登录</p>
+</blockquote>
+<h4 id="使用ssh-keygen生成密匙对"><a href="#使用ssh-keygen生成密匙对" class="headerlink" title="使用ssh-keygen生成密匙对"></a>使用ssh-keygen生成密匙对</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ cd .ssh </span><br><span class="line">➜  .ssh </span><br><span class="line">➜  .ssh ssh-keygen -t rsa</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/zhaochao/.ssh/id_rsa): id_rsa</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br></pre></td></tr></table></figure>
+
+<p>回车以后，询问是否要输入一个密码来保护这个密匙，为了方便起见，我就不输入了，不然每次使用这个密匙文件还要输一遍密码,直接一路回车就ok</p>
+<p>到了这里，可以看到我们已经创建好了密匙对</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  .ssh ls</span><br><span class="line">id_rsa      id_rsa.pub  known_hosts</span><br></pre></td></tr></table></figure>
+<p>我们可以使用<code>cat</code>命令来获取这个id_rsa.pub</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  .ssh cat id_rsa.pub </span><br><span class="line">ssh-rsa AAAAB3NDzaC1yc2EAFADAADAQFcPFT++P8rOkltuIGDSle45yEyDXtDGcCVcHmHAa8TH3/1G+cGusuvREewaJWdxS95fopdi7iumedN+bOJsCIyDsskuLJtt9FaT1MlEg8C3DH+VTkVTKadOYtFF0cwSediRadqjhMQqTOq6gH1g6zTkr4eGEIPp5RaPFDLZmeGiOeYvIS+d8eIdpHckO90KWL0T0bOcjifHlle+5ia0tSo4ZP5ekp0CxTlu0McorQIU7C1cjW/Iz5xQHpYFOdkKYImQob0H0bletwGY8K4A48ioEG9bfiBwbhmCrt93SGcp40G4e6KsuqLMe+5JUqqRcOg7TqvmD/FnftFbjDz2VTGJ/WlEJ4P3HXvAR8CdKPc/DJMmTV3oxwlmdgtDLFpqW7BkydkF2wSkO1+QP4p5ua3Ned7VLlNb16JKafBXD59q1yhwtsvhDxcgmk0tL5O3H4KPCHMZ6tePcWF2wPf+K/zLqV5DF2KXjat+PMveQf6NWAP+KK2jlG8AyV2+BBTI4nC5TdRZMXGmnVOvoc/eGbBB0NohoxZbFnjIVmpLUJcXrUXmXPojjauXQ0z37Ve/uOarVCkDTMimL+GZ4HrOx2s7FR1XM0cpw== 123456@qq.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="将公钥文件放进authorized-keys中"><a href="#将公钥文件放进authorized-keys中" class="headerlink" title="将公钥文件放进authorized_keys中"></a>将公钥文件放进authorized_keys中</h4><p>目标主机上如果没有.ssh文件夹，就自己创建一个，创建好之后,再创建一个authorized_keys文件。如果有的话就不用了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@wzt-dev2-PC:~/.ssh# ll</span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x  2 root root 4096 7月  17 19:49 ./</span><br><span class="line">drwx------ 10 root root 4096 7月  17 19:49 ../</span><br><span class="line">-rw-r--r--  1 root root    0 7月  17 19:49 authorized_keys</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>将刚才的id_rsa.pub的内容放进去保存一下就可以</p>
+<h4 id="这里需要注意"><a href="#这里需要注意" class="headerlink" title="这里需要注意"></a>这里需要注意</h4><blockquote>
+<p>authorized_keys 文件对权限有哟求，必须是600(-rw——-)或者644<br>.ssh目录 必须是700(drwx——),否则一会儿登录不成功<br>弄完之后检查一下权限，如果不是的话，改成响应的权限就ok了</p>
+</blockquote>
+<h4 id="准备就绪，在客户端上登录目标主机"><a href="#准备就绪，在客户端上登录目标主机" class="headerlink" title="准备就绪，在客户端上登录目标主机"></a>准备就绪，在客户端上登录目标主机</h4><p>在登录之前，要确认一下目标主机是否允许密匙对登录，一般都是打开的，如果没有打开就自己打开</p>
+<blockquote>
+<p>(查看 &#x2F;etc&#x2F;ssh&#x2F;sshd_config 文件内容 中的 PubkeyAuthentication 这一项是否为 yes,如果不是就自己修改成yes之后重启sshd服务 )</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">wzy@wzt-dev2-PC:~$ cat /etc/ssh/sshd_config</span><br><span class="line"># Package generated configuration file</span><br><span class="line"># See the sshd_config(5) manpage for details</span><br><span class="line"></span><br><span class="line"># What ports, IPs and protocols we listen for</span><br><span class="line">Port 22</span><br><span class="line"># Use these options to restrict which interfaces/protocols sshd will bind to</span><br><span class="line">#ListenAddress ::</span><br><span class="line">#ListenAddress 0.0.0.0</span><br><span class="line">Protocol 2</span><br><span class="line"># HostKeys for protocol version 2</span><br><span class="line">HostKey /etc/ssh/ssh_host_rsa_key</span><br><span class="line">HostKey /etc/ssh/ssh_host_dsa_key</span><br><span class="line">HostKey /etc/ssh/ssh_host_ecdsa_key</span><br><span class="line">HostKey /etc/ssh/ssh_host_ed25519_key</span><br><span class="line">#Privilege Separation is turned on for security</span><br><span class="line">UsePrivilegeSeparation yes</span><br><span class="line"></span><br><span class="line"># Lifetime and size of ephemeral version 1 server key</span><br><span class="line">KeyRegenerationInterval 3600</span><br><span class="line">ServerKeyBits 1024</span><br><span class="line"></span><br><span class="line"># Logging</span><br><span class="line">SyslogFacility AUTH</span><br><span class="line">LogLevel INFO</span><br><span class="line"></span><br><span class="line"># Authentication:</span><br><span class="line">LoginGraceTime 120</span><br><span class="line">PermitRootLogin yes</span><br><span class="line">StrictModes yes</span><br><span class="line"></span><br><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes   &lt;---------------  在这里</span><br><span class="line">#AuthorizedKeysFile %h/.ssh/authorized_keys</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>到此我们就配置完了。 (不用输入密码就可以登录了)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ ./ssh_my_tencent </span><br><span class="line">Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-118-generic x86_64)</span><br><span class="line"></span><br><span class="line"> * Documentation:  https://help.ubuntu.com</span><br><span class="line"> * Management:     https://landscape.canonical.com</span><br><span class="line"> * Support:        https://ubuntu.com/advantage</span><br><span class="line"></span><br><span class="line">  System information as of Wed Dec  9 10:45:26 CST 2020</span><br><span class="line"></span><br><span class="line">  System load:  0.0               Processes:           89</span><br><span class="line">  Usage of /:   5.0% of 49.15GB   Users logged in:     0</span><br><span class="line">  Memory usage: 12%               IP address for eth0: 172.21.0.16</span><br><span class="line">  Swap usage:   0%</span><br><span class="line"></span><br><span class="line"> * Introducing self-healing high availability clusters in MicroK8s.</span><br><span class="line">   Simple, hardened, Kubernetes for production, from RaspberryPi to DC.</span><br><span class="line"></span><br><span class="line">     https://microk8s.io/high-availability</span><br><span class="line"></span><br><span class="line"> * Canonical Livepatch is available for installation.</span><br><span class="line">   - Reduce system reboots and improve kernel security. Activate at:</span><br><span class="line">     https://ubuntu.com/livepatch</span><br><span class="line">New release &#x27;20.04.1 LTS&#x27; available.</span><br><span class="line">Run &#x27;do-release-upgrade&#x27; to upgrade to it.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt; Hi, How are you &gt;</span><br><span class="line"> -----------------</span><br><span class="line">        \   ^__^</span><br><span class="line">         \  (oo)\_______</span><br><span class="line">            (__)\       )\/\</span><br><span class="line">                ||----w |</span><br><span class="line">                ||     ||</span><br><span class="line">Last login: Wed Dec  9 09:21:16 2020 from 124.126.1.181</span><br></pre></td></tr></table></figure>
+	  <div class="article-footer-copyright">
+
+    本博客采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议(CC BY-NC-SA 4.0) 发布.</a>
+</div>
+
+	</div>
+
+	
+	
+	<div>
+  	<center>
+
+	<div class="pagination">
+
+    
+    
+    <a href="/2020/12/09/给Linux安装nginx/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2020/12/08/给Linux服务器设置登录提示/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	<!--
+<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
+
+-->
+	
+	
+	
+	</div> <!-- col-md-9/col-md-12 -->
+
+
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-12-09 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Linux/">Linux<span>6</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Linux/">Linux<span>5</span></a></li> <li><a href="/tags/SSH/">SSH<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+		
+
+	</div>
+	
+		
+
+</div><!-- row -->
+
+<!--
+ -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  &copy; 2024 Weaver Li's Blog
+  
+      powered by <a href="http://hexo.io/" target="_blank">Hexo</a>.Theme <a href="https://github.com/Ares-X/hexo-theme-freemind.bithack" target="_blank">freemind.bithack</a>  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
